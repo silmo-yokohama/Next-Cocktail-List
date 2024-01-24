@@ -11,7 +11,7 @@ interface Props {
 
 const CocktailCard = ({ data }: Props) => {
   return (
-    <div className="card m-auto w-11/12 overflow-hidden rounded-xl bg-accent shadow-xl md:w-5/12 lg:w-3/12">
+    <div className="shadow-3xl group card m-auto w-11/12 overflow-hidden rounded-md bg-base-200 hover:shadow-primary">
       <a href={`/list/${data.cocktail_id}`} className="">
         <CardImage
           image={`https://dm58o2i5oqos8.cloudfront.net/photos/${data.cocktail_id}.jpg`}

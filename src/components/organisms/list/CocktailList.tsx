@@ -7,7 +7,7 @@ interface Props {
 
 const CocktailList = ({ list }: Props) => {
   return (
-    <div className="m-auto flex max-w-6xl flex-wrap justify-between gap-10">
+    <div className="m-auto grid max-w-[1980px] gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
       {list.map((cocktail, index) => {
         return <CocktailCard key={index} data={cocktail} />;
       })}
