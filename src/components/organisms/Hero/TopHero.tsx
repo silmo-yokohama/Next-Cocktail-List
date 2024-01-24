@@ -8,7 +8,7 @@ const TopHero = ({ children }: Props) => {
     <div
       className="hero min-h-screen"
       style={{
-        backgroundImage: "url(/images/photo/firstview.jpg)",
+        backgroundImage: "url(/images/photo/firstview.webp)",
       }}
     >
       <div className="hero-overlay bg-opacity-60"></div>
