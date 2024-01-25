@@ -8,11 +8,11 @@ const PaginateLink = ({ children, href }: Props) => {
   return (
     <>
       {href ? (
-        <Link href={href} className="btn btn-outline px-8">
+        <Link href={href} className="btn btn-outline flex px-8">
           {children}
         </Link>
       ) : (
-        <button className="btn btn-disabled btn-outline px-8" disabled>
+        <button className="btn btn-disabled btn-outline flex px-8" disabled>
           {children}
         </button>
       )}

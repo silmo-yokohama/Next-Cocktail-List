@@ -3,7 +3,7 @@ interface Props {
   children: ReactNode;
 }
 const CardText = ({ children }: Props) => {
-  return <p className="text-xs">{children}</p>;
+  return <p className="prose text-xs">{children}</p>;
 };
 
 export default CardText;

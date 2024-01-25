@@ -4,7 +4,7 @@ interface Props {
 }
 
 const BadgeOutline = ({ children }: Props) => {
-  return <div className="badge badge-outline">{children}</div>;
+  return <div className="badge badge-outline text-xs">{children}</div>;
 };
 
 export default BadgeOutline;

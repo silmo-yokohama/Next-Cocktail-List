@@ -1,6 +1,6 @@
-import CocktailCard from "@/components/molecules/cards/CocktailCard";
+import CocktailCard from "@/components/organisms/list/CocktailCard";
 import { CocktailData } from "@/types/CocktailData";
-import React, { ReactNode } from "react";
+import React from "react";
 interface Props {
   list: CocktailData[];
 }
