@@ -13,5 +13,6 @@ export type CocktailData = {
   glass_name: string;
   type_name: string;
   cocktail_digest: string;
+  cocktail_desc: string;
   recipes: CocktailRecipe[];
 };

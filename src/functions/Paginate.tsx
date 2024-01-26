@@ -1,7 +1,7 @@
-import { CocktailAPIResponse } from "@/types/SearchResponseType";
+import { CocktailsAPIResponse } from "@/types/SearchResponseType";
 
 export const getPaginateLink = (
-  data: CocktailAPIResponse,
+  data: CocktailsAPIResponse,
 ): { next: string | null; prev: string | null } => {
   const nextLink =
     data.total_pages === data.current_page

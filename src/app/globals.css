@@ -1,3 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Kosugi&family=M+PLUS+1:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  *,
+  *::after,
+  *::before {
+    @apply box-border;
+  }
+
+  body {
+    font-family: "M PLUS 1", sans-serif;
+  }
+
+  .en {
+    font-family: "Roboto Slab", serif;
+  }
+}

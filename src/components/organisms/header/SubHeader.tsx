@@ -4,6 +4,7 @@ interface Props {
   children: ReactNode;
 }
 const SubHeader = ({ children }: Props) => {
+  console.log(children);
   return (
     <div
       className="hero mb-10 min-h-32 md:min-h-48"

@@ -26,7 +26,7 @@ const FavoriteAnimeButton = ({ checked }: Props) => {
     if (checked) ref.current?.play();
   }, []);
 
-  return <Player ref={ref} speed={2} keepLastFrame src={heart} />;
+  return <Player ref={ref} speed={1.2} keepLastFrame src={heart} />;
 };
 
 export default FavoriteAnimeButton;

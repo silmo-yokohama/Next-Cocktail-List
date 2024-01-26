@@ -1,5 +1,5 @@
 import { getCocktails } from "@/libs/getCockTail";
-import { CocktailAPIResponse } from "@/types/SearchResponseType";
+import { CocktailsAPIResponse } from "@/types/SearchResponseType";
 import React from "react";
 import CocktailList from "../organisms/list/CocktailList";
 import SubHeader from "../organisms/header/SubHeader";
@@ -10,7 +10,7 @@ interface Props {
   title: string;
 }
 const CocktailListTemplate = async ({ page, title }: Props) => {
-  const result: CocktailAPIResponse = await getCocktails({
+  const result: CocktailsAPIResponse = await getCocktails({
     page: Number(page),
   });
   const { next, prev } = getPaginateLink(result);
