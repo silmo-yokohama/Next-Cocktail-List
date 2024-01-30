@@ -23,7 +23,7 @@ export default async function Home() {
             <div className="my-5 flex w-full items-center justify-center">
               <Link
                 href="/list"
-                className="btn btn-outline btn-block w-1/2 hover:bg-base-200 hover:text-white"
+                className="btn btn-outline w-1/2 hover:bg-base-200 hover:text-white"
               >
                 一覧を見る
               </Link>

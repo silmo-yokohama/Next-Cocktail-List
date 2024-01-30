@@ -1,28 +1,33 @@
-import { getCocktails } from "@/libs/getCockTail";
 import { CocktailsAPIResponse } from "@/types/SearchResponseType";
 import React from "react";
 import CocktailList from "../organisms/list/CocktailList";
 import SubHeader from "../organisms/header/SubHeader";
 import Pagination from "../organisms/Pagination";
-import { getPaginateLink } from "@/functions/Paginate";
+import TopSearchForm from "../molecules/forms/TopSearchForm";
+
 interface Props {
-  page: number;
+  response: CocktailsAPIResponse;
   title: string;
+  next: string | null;
+  prev: string | null;
+  searchInput?: string | null;
 }
-const CocktailListTemplate = async ({ page, title }: Props) => {
-  const result: CocktailsAPIResponse = await getCocktails({
-    page: Number(page),
-  });
-  const { next, prev } = getPaginateLink(result);
+const CocktailListTemplate = async ({
+  response,
+  title,
+  next,
+  prev,
+  searchInput,
+}: Props) => {
+  const { cocktails } = response;
 
   return (
-    <div className="w-full">
+    <div className="min-h-screen w-full">
       <SubHeader>{title}</SubHeader>
-      {result.status === "0000" ? (
-        <CocktailList list={result.cocktails} />
-      ) : (
-        <div className=""></div>
-      )}
+      <div className="m-auto mb-10 w-7/12 max-w-[1980px]">
+        <TopSearchForm searchText={searchInput} />
+      </div>
+      <CocktailList list={cocktails} />
 
       <Pagination next={next} prev={prev} />
     </div>

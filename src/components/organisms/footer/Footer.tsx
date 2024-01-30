@@ -25,7 +25,7 @@ const Footer = () => {
         </nav>
 
         <aside className="items-center md:w-1/2 md:text-left">
-          <p className="en" text-xs>
+          <p className="en">
             ©
             <a
               href="https://silmo.jp"

@@ -9,8 +9,11 @@ interface Props {
 }
 
 const Pagination = ({ next, prev }: Props) => {
+  const hidden = !next && !prev;
   return (
-    <div className="m-auto my-4 mt-10 flex max-w-[1980px] justify-between px-4">
+    <div
+      className={`m-auto my-4 mt-10 flex max-w-[1980px] justify-between px-4 ${hidden && "invisible"}`}
+    >
       <PaginateLink href={prev}>
         <LeftArrowIcon />
         <span>Prev</span>

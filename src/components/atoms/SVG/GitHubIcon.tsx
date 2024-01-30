@@ -10,8 +10,8 @@ const GitHubIcon = ({ size }: { size?: number }) => {
       xmlns="http://www.w3.org/2000/svg"
       className="fill-current"
     >
-      <g stroke-width="0"></g>
-      <g stroke-linecap="round" stroke-linejoin="round"></g>
+      <g strokeWidth="0"></g>
+      <g strokeLinecap="round" strokeLinejoin="round"></g>
       <g>
         <defs> </defs>
         <g

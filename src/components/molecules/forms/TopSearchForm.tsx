@@ -2,18 +2,25 @@
 import SearchIcon from "@/components/atoms/SVG/SearchIcon";
 import SearchButton from "@/components/atoms/buttons/SearchButton";
 import SearchInput from "@/components/atoms/forms/SearchInput";
-import React, { ChangeEvent, useState } from "react";
+import { useRouter } from "next/navigation";
+import React, { useState } from "react";
 
-const TopSearchForm = () => {
-  const [searchInput, setSearchInput] = useState("");
+interface Props {
+  searchText?: string | null;
+}
+
+const TopSearchForm = ({ searchText }: Props) => {
+  const [searchInput, setSearchInput] = useState(searchText || "");
+  const router = useRouter();
   const onChange = (e: any) => {
     setSearchInput(e.target.value);
   };
 
   const onClick = (e: any) => {
     e.preventDefault();
+    if (!searchInput) return;
 
-    console.log(searchInput);
+    router.push(`/search?word=${searchInput}`);
   };
 
   return (
